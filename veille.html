@@ -3,10 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veille - Yanis Tighouart</title>
+    <title>Veille Technologique - Yanis Tighouart</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Grille spécifique pour les articles */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-bottom: 4rem;
+        }
+        
+        .article-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Petit accent coloré en haut de la carte */
+        .article-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+        }
+
+        .article-source {
+            color: #06b6d4;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .article-title {
+            color: #f1f5f9;
+            font-size: 1.3rem;
+            margin: 0 0 1rem 0;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            font-style: italic;
+            border-left: 2px solid rgba(255,255,255,0.1);
+            padding-left: 1rem;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            margin-top: auto;
+        }
+
+        .read-more:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
@@ -15,18 +104,57 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
     <div class="container">
-        <h1 style="text-align: center;">L'implémentation de l'IPv6</h1>
-        <div class="card">
-            <h3>Sujet</h3>
-            <p>Transition IPv4 vers IPv6 et sécurité native.</p>
-            <h3>Détails</h3>
-            <ul style="color: var(--text-blue);">
-                <li>Comparaison des en-têtes.</li>
-                <li>Fonctionnement du SLAAC.</li>
-                <li>Sécurité IPsec.</li>
-            </ul>
+        <header style="padding: 2rem 0; text-align: center;">
+            <h1>Veille Technologique</h1>
+            <p style="color: #94a3b8;">Suivi des actualités et innovations dans le domaine des réseaux et de la sécurité.</p>
+        </header>
+
+        <div class="articles-grid">
+            
+            <!-- Article 1 : IPv6 -->
+            <article class="article-card">
+                <span class="article-source">🌐 ARCEP</span>
+                <h2 class="article-title">L'état du déploiement de l'IPv6 en France</h2>
+                <p class="article-excerpt">"La pénurie d'adresses IPv4 est désormais une réalité concrète. La transition vers IPv6 devient impérative pour garantir la continuité de la croissance d'Internet et l'innovation des services connectés..."</p>
+                <a href="https://www.arcep.fr/la-regulation/grands-dossiers-reseaux-mobiles/le-passage-a-ipv6.html" target="_blank" class="read-more">Lire l'article complet →</a>
+            </article>
+
+            <!-- Article 2 : Wi-Fi 7 -->
+            <article class="article-card">
+                <span class="article-source">📶 Wi-Fi Alliance</span>
+                <h2 class="article-title">Wi-Fi 7 : La révolution du très haut débit sans fil</h2>
+                <p class="article-excerpt">"Basé sur la norme IEEE 802.11be, le Wi-Fi 7 promet des débits théoriques atteignant 46 Gbps, une latence ultra-faible et une meilleure gestion des interférences grâce à l'utilisation de la bande 6 GHz..."</p>
+                <a href="https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7" target="_blank" class="read-more">Lire l'article complet →</a>
+            </article>
+
+            <!-- Article 3 : Zero Trust -->
+            <article class="article-card">
+                <span class="article-source">🛡️ ANSSI / Cybermalveillance</span>
+                <h2 class="article-title">Le modèle Zero Trust : Ne jamais faire confiance</h2>
+                <p class="article-excerpt">"Le modèle de sécurité périmétrique traditionnel est obsolète. L'approche Zero Trust (ZTNA) part du principe qu'aucune entité, interne ou externe au réseau, ne doit être approuvée par défaut sans vérification continue..."</p>
+                <a href="https://www.ssi.gouv.fr/" target="_blank" class="read-more">Lire l'article complet →</a>
+            </article>
+
+            <!-- Article 4 : HTTP/3 -->
+            <article class="article-card">
+                <span class="article-source">⚡ Cloudflare Blog</span>
+                <h2 class="article-title">HTTP/3 et QUIC : Accélérer le Web moderne</h2>
+                <p class="article-excerpt">"HTTP/3 est la prochaine itération majeure du protocole de transfert hypertexte. Contrairement à ses prédécesseurs basés sur TCP, il utilise QUIC (sur UDP) pour réduire la latence de connexion et éviter le blocage de tête de ligne..."</p>
+                <a href="https://blog.cloudflare.com/fr-fr/http3-the-past-present-and-future-fr-fr/" target="_blank" class="read-more">Lire l'article complet →</a>
+            </article>
+
+            <!-- Article 5 : SD-WAN -->
+            <article class="article-card">
+                <span class="article-source">☁️ Cisco Networking</span>
+                <h2 class="article-title">L'essor du SD-WAN dans les entreprises</h2>
+                <p class="article-excerpt">"Le SD-WAN (Software-Defined Wide Area Network) transforme la gestion des réseaux étendus en découplant le plan de contrôle du plan de données, permettant une gestion centralisée et une optimisation dynamique du trafic vers le Cloud..."</p>
+                <a href="https://www.cisco.com/c/fr_fr/solutions/enterprise-networks/sd-wan/what-is-sd-wan.html" target="_blank" class="read-more">Lire l'article complet →</a>
+            </article>
+
         </div>
     </div>
+
 </body>
 </html>
