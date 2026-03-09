@@ -78,6 +78,66 @@
             background: rgba(6, 182, 212, 0.1);
             color: #fff;
         }
+
+        /* Styles du formulaire */
+        .contact-form {
+            width: 100%;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #f1f5f9;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #3b82f6;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #06b6d4, #3b82f6);
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            padding: 12px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -97,6 +157,23 @@
             <p style="color: #94a3b8; margin-bottom: 2rem;">
                 Je suis actuellement à la recherche d'opportunités en alternance ou en stage dans le domaine des systèmes et réseaux. N'hésitez pas à consulter mon CV ou à m'envoyer un message.
             </p>
+
+            <!-- Formulaire de contact -->
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" class="form-control" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" required placeholder="Votre message..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer le message</button>
+            </form>
 
             <div class="contact-buttons">
                 <!-- Bouton Email -->
@@ -119,5 +196,8 @@
 
 </body>
 </html>
+
+</html>
+
 
 
