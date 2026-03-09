@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Yanis Tighouart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html" class="active">Projets</a></li>
+            <li><a href="veille.html">Veilles Techno</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 style="text-align: center;">Mes Projets</h1>
+        <div class="projects-grid">
+            <div class="card"><h3>🖥️ Xibo CMS</h3><p>Déploiement d'affichage dynamique via Docker sur Debian 12.</p></div>
+            <div class="card"><h3>🪟 Windows Server</h3><p>Active Directory, GPO, DNS et DHCP.</p></div>
+            <div class="card"><h3>🛡️ Stormshield</h3><p>Pare-feu, filtrage et sécurisation des flux.</p></div>
+            <div class="card"><h3>🎫 GLPI</h3><p>Ticketing et inventaire de parc.</p></div>
+            <div class="card"><h3>⚙️ Mastering</h3><p>Déploiement WDS/MDT via PXE.</p></div>
+        </div>
+    </div>
+</body>
+</html>

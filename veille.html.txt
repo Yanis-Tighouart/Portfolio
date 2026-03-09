@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille - Yanis Tighouart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="veille.html" class="active">Veilles Techno</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1 style="text-align: center;">L'implémentation de l'IPv6</h1>
+        <div class="card">
+            <h3>Sujet</h3>
+            <p>Transition IPv4 vers IPv6 et sécurité native.</p>
+            <h3>Détails</h3>
+            <ul style="color: var(--text-blue);">
+                <li>Comparaison des en-têtes.</li>
+                <li>Fonctionnement du SLAAC.</li>
+                <li>Sécurité IPsec.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

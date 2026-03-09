@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Yanis Tighouart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="veille.html">Veilles Techno</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="https://i.pinimg.com/originals/c3/46/24/c3462453912d091398939d892869c403.jpg" alt="Gargamel" class="profile-img">
+        <h1>Yanis Tighouart</h1>
+        <h2>Technicien Systèmes et Réseaux</h2>
+    </header>
+
+    <div class="container">
+        <section>
+            <h3 style="color: var(--text-blue);">À propos</h3>
+            <p style="color: #fff;">Passionné par l'informatique, je suis spécialisé dans l'administration serveur et la sécurité.</p>
+        </section>
+
+        <section>
+            <h3 style="color: var(--text-blue);">Tableau de Synthèse des Compétences</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Domaine de Compétence</th>
+                        <th>Projet Associé</th>
+                        <th>Détails</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Gérer le patrimoine</td><td>GLPI & Windows</td><td>Inventaire et AD.</td></tr>
+                    <tr><td>Répondre aux incidents</td><td>GLPI</td><td>Ticketing et SLA.</td></tr>
+                    <tr><td>Présence en ligne</td><td>Xibo CMS</td><td>Affichage dynamique.</td></tr>
+                    <tr><td>Mode projet</td><td>Mastering</td><td>Déploiement WDS/MDT.</td></tr>
+                    <tr><td>Services réseaux</td><td>Windows Server</td><td>DNS, DHCP.</td></tr>
+                    <tr><td>Sécurité</td><td>Stormshield</td><td>Filtrage et VPN.</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

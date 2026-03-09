@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Yanis Tighouart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="veille.html">Veilles Techno</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container" style="text-align: center; margin-top: 5rem;">
+        <h1>Me Contacter</h1>
+        <div class="card" style="display: inline-block;">
+            <a href="mailto:ton-email@exemple.com" class="btn">✉️ Email</a>
+            <a href="https://www.linkedin.com/" class="btn">👔 LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html>
+
