@@ -3,10 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets - Yanis Tighouart</title>
+    <title>Projets & Compétences - Yanis Tighouart</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles spécifiques pour la liste des projets */
+        .competence-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-bottom: 4rem;
+        }
+
+        .project-card {
+            background: rgba(30, 41, 59, 0.7); /* Fond semi-transparent */
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Barre latérale colorée pour chaque carte */
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #3b82f6, #06b6d4);
+        }
+
+        .competence-badge {
+            display: inline-block;
+            background: rgba(6, 182, 212, 0.1);
+            color: #06b6d4;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        .project-title {
+            color: #f1f5f9;
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            font-weight: 700;
+        }
+
+        .justification {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            border-left: 2px solid rgba(255,255,255,0.1);
+            padding-left: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 <body>
+
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
@@ -17,14 +84,50 @@
     </nav>
 
     <div class="container">
-        <h1 style="text-align: center;">Mes Projets</h1>
-        <div class="projects-grid">
-            <div class="card"><h3>🖥️ Xibo CMS</h3><p>Déploiement d'affichage dynamique via Docker sur Debian 12.</p></div>
-            <div class="card"><h3>🪟 Windows Server</h3><p>Active Directory, GPO, DNS et DHCP.</p></div>
-            <div class="card"><h3>🛡️ Stormshield</h3><p>Pare-feu, filtrage et sécurisation des flux.</p></div>
-            <div class="card"><h3>🎫 GLPI</h3><p>Ticketing et inventaire de parc.</p></div>
-            <div class="card"><h3>⚙️ Mastering</h3><p>Déploiement WDS/MDT via PXE.</p></div>
+        <header style="padding: 2rem 0; text-align: center;">
+            <h1>Mes Projets & Compétences</h1>
+            <p style="color: #94a3b8;">Validation des compétences du référentiel à travers mes réalisations techniques.</p>
+        </header>
+
+        <div class="competence-list">
+            
+            <!-- Compétence 1 -->
+            <article class="project-card">
+                <span class="competence-badge">1. Gérer le patrimoine informatique</span>
+                <h2 class="project-title">🖥️ Windows Server (AD, DHCP, DNS)</h2>
+                <p class="justification">La mise en place de l'Active Directory permet de recenser et d'identifier les ressources numériques (utilisateurs, ordinateurs). La configuration du DNS et du DHCP correspond à l'exploitation de référentiels et de standards.</p>
+            </article>
+
+            <!-- Compétence 2 -->
+            <article class="project-card">
+                <span class="competence-badge">2. Répondre aux incidents</span>
+                <h2 class="project-title">🎫 Gestion des tickets GLPI</h2>
+                <p class="justification">C'est le cœur de cette compétence. Utiliser GLPI permet de collecter, suivre et orienter les demandes des utilisateurs. Le traitement des tickets permet de traiter des demandes concernant les services réseau et système.</p>
+            </article>
+
+            <!-- Compétence 3 -->
+            <article class="project-card">
+                <span class="competence-badge">3. Développer la présence en ligne</span>
+                <h2 class="project-title">📺 Xibo (Affichage dynamique)</h2>
+                <p class="justification">Bien que ce ne soit pas un site web classique, Xibo participe à la valorisation de l'image de l'organisation sur des médias numériques. Il s'agit de diffuser des informations et du contenu visuel pour l'organisation.</p>
+            </article>
+
+            <!-- Compétence 4 -->
+            <article class="project-card">
+                <span class="competence-badge">4. Travailler en mode projet</span>
+                <h2 class="project-title">🚀 Déploiement Xibo & Docker</h2>
+                <p class="justification">Pour le déploiement de Xibo, j'ai dû analyser les objectifs (besoin d'affichage), planifier les activités (installation Debian, Docker, puis configuration du Player) et évaluer les indicateurs (le système est-il fonctionnel ?).</p>
+            </article>
+
+            <!-- Compétence 5 -->
+            <article class="project-card">
+                <span class="competence-badge">5. Mettre à disposition un service</span>
+                <h2 class="project-title">🛡️ Pare-feu Stormshield</h2>
+                <p class="justification">L'installation d'un pare-feu Stormshield correspond au déploiement d'un service. J'ai réalisé les tests d'intégration (vérification du filtrage) et accompagné les utilisateurs en sécurisant leurs accès.</p>
+            </article>
+
         </div>
     </div>
+
 </body>
 </html>
