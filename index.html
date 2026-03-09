@@ -5,74 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Tighouart Yanis</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .navbar {
+            background-color: #1f1f1f;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .hero {
+            background: linear-gradient(45deg, #1f1f1f, #121212);
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.25rem;
+        }
+        section {
+            padding: 60px 0;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: bold;
+            color: #0d6efd;
         }
         .project-card {
+            background-color: #1f1f1f;
+            border: 1px solid #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card-title i {
+            margin-right: 10px;
+            color: #0d6efd;
+        }
+        .skills-table {
+            background-color: #1f1f1f;
+        }
+        .skills-table th, .skills-table td {
+            border-color: #333;
+            color: #ffffff;
+        }
+        .footer {
+            background-color: #1f1f1f;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer a {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #0d6efd;
         }
     </style>
 </head>
 <body>
-    <div class="container my-5">
-        <header class="text-center mb-5">
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Yanis Tighouart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
             <h1>Tighouart Yanis</h1>
             <p class="lead">Technicien Systèmes et Réseaux</p>
-        </header>
+        </div>
+    </header>
 
-        <section class="mb-5">
-            <h2>Introduction</h2>
-            <p>Passionné par l'informatique, je me suis spécialisé dans l'administration de serveurs et la sécurité des réseaux. J'aime concevoir, déployer et maintenir des infrastructures robustes et sécurisées, en m'appuyant sur des technologies fiables et éprouvées.</p>
+    <main class="container">
+        <section id="about">
+            <h2><i class="fas fa-user"></i> Introduction</h2>
+            <p class="text-center lead">Passionné par l'informatique, je me suis spécialisé dans l'administration de serveurs et la sécurité des réseaux. J'aime concevoir, déployer et maintenir des infrastructures robustes et sécurisées, en m'appuyant sur des technologies fiables et éprouvées.</p>
         </section>
 
-        <section class="mb-5">
-            <h2>Projets</h2>
+        <section id="projects">
+            <h2><i class="fas fa-tasks"></i> Projets</h2>
             <div class="row">
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card project-card">
                         <div class="card-body">
-                            <h5 class="card-title">Xibo CMS</h5>
+                            <h5 class="card-title"><i class="fas fa-desktop"></i> Xibo CMS</h5>
                             <p class="card-text">Déploiement d'un système d'affichage dynamique open-source avec Docker sur Debian 12 pour la gestion centralisée de contenus multimédias.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card project-card">
                         <div class="card-body">
-                            <h5 class="card-title">Windows Server</h5>
+                            <h5 class="card-title"><i class="fas fa-server"></i> Windows Server</h5>
                             <p class="card-text">Mise en place d'une infrastructure Active Directory complète avec gestion des utilisateurs, des groupes, et configuration des services DNS et DHCP.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card project-card">
                         <div class="card-body">
-                            <h5 class="card-title">Sécurité Stormshield</h5>
+                            <h5 class="card-title"><i class="fas fa-shield-alt"></i> Sécurité Stormshield</h5>
                             <p class="card-text">Configuration de règles de filtrage et de politiques de sécurité sur des pare-feu physiques et virtuels Stormshield pour protéger le réseau de l'entreprise.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card project-card">
                         <div class="card-body">
-                            <h5 class="card-title">Gestion de parc GLPI</h5>
+                            <h5 class="card-title"><i class="fas fa-ticket-alt"></i> Gestion de parc GLPI</h5>
                             <p class="card-text">Déploiement de GLPI pour la gestion des tickets d'incidents, le suivi du parc informatique et l'automatisation des tâches de support.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card project-card">
                         <div class="card-body">
-                            <h5 class="card-title">Mastering & PXE</h5>
+                            <h5 class="card-title"><i class="fas fa-compact-disc"></i> Mastering & PXE</h5>
                             <p class="card-text">Mise en place d'un serveur de déploiement automatisé d'images Windows (WDS/MDT) pour l'installation et la configuration à distance des postes de travail.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card project-card">
                         <div class="card-body">
-                            <h5 class="card-title">Veille Technologique</h5>
+                            <h5 class="card-title"><i class="fas fa-lightbulb"></i> Veille Technologique</h5>
                             <p class="card-text">Réalisation d'une étude sur les enjeux et les stratégies de migration vers l'IPv6, incluant des recommandations pour une transition en douceur.</p>
                         </div>
                     </div>
@@ -80,41 +161,49 @@
             </div>
         </section>
 
-        <section class="mb-5">
-            <h2>Compétences</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Projet</th>
-                        <th>Compétence Associée</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Xibo CMS, Windows Server, GLPI, Mastering & PXE</td>
-                        <td>Gérer le patrimoine informatique</td>
-                    </tr>
-                    <tr>
-                        <td>Sécurité Stormshield</td>
-                        <td>Répondre aux incidents et aux demandes d’assistance et d’évolution</td>
-                    </tr>
-                    <tr>
-                        <td>Tous les projets</td>
-                        <td>Travailler en mode projet</td>
-                    </tr>
-                    <tr>
-                        <td>Veille Technologique</td>
-                        <td>Mettre à disposition des utilisateurs un service informatique</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section id="skills">
+            <h2><i class="fas fa-cogs"></i> Compétences</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered skills-table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Projet</th>
+                            <th>Compétence Associée</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Xibo CMS, Windows Server, GLPI, Mastering & PXE</td>
+                            <td>Gérer le patrimoine informatique</td>
+                        </tr>
+                        <tr>
+                            <td>Sécurité Stormshield</td>
+                            <td>Répondre aux incidents et aux demandes d’assistance et d’évolution</td>
+                        </tr>
+                        <tr>
+                            <td>Tous les projets</td>
+                            <td>Travailler en mode projet</td>
+                        </tr>
+                        <tr>
+                            <td>Veille Technologique</td>
+                            <td>Mettre à disposition des utilisateurs un service informatique</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
+    </main>
 
-        <footer class="text-center">
+    <footer id="contact" class="footer">
+        <div class="container">
             <h2>Contact</h2>
-            <a href="https://www.linkedin.com/in/yanis-tighouart/" class="btn btn-primary" target="_blank">LinkedIn</a>
-            <a href="mailto:yanis.tighouart@outlook.fr" class="btn btn-secondary">Envoyer un email</a>
-        </footer>
-    </div>
+            <div class="mt-4">
+                <a href="https://www.linkedin.com/in/yanis-tighouart/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:yanis.tighouart@outlook.fr"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
