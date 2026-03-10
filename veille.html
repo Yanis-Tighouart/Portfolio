@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Grille spécifique pour les articles */
         .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -24,7 +23,6 @@
             transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             position: relative;
             overflow: hidden;
         }
@@ -35,14 +33,10 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        /* Petit accent coloré en haut de la carte */
         .article-card::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
+            top: 0; left: 0; width: 100%; height: 3px;
             background: linear-gradient(90deg, #3b82f6, #06b6d4);
         }
 
@@ -53,44 +47,38 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .article-title {
             color: #f1f5f9;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin: 0 0 1rem 0;
             font-weight: 700;
-            line-height: 1.4;
         }
 
         .article-excerpt {
             color: #94a3b8;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 1.5rem;
-            flex-grow: 1;
-            font-style: italic;
-            border-left: 2px solid rgba(255,255,255,0.1);
+            border-left: 2px solid rgba(59, 130, 246, 0.3);
             padding-left: 1rem;
         }
 
         .read-more {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
             color: #3b82f6;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s;
+            font-size: 0.85rem;
             margin-top: auto;
         }
 
-        .read-more:hover {
-            color: #60a5fa;
-            text-decoration: underline;
+        .methodology-box {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            color: var(--text-light);
         }
     </style>
 </head>
@@ -108,49 +96,56 @@
     <div class="container">
         <header style="padding: 2rem 0; text-align: center;">
             <h1>Veille Technologique</h1>
-            <p style="color: #94a3b8;">Suivi des actualités et innovations dans le domaine des réseaux et de la sécurité.</p>
+            <p style="color: #94a3b8;">Analyse des évolutions techniques liées à mon environnement professionnel.</p>
         </header>
+
+        <div class="methodology-box">
+            <h3>🛠️ Ma Méthodologie de Veille</h3>
+            <p>Pour rester à jour, j'utilise des outils de curation comme <strong>Feedly</strong> et je suis les alertes de l'<strong>ANSSI</strong>. Je consulte régulièrement des médias spécialisés (IT-Connect, Le Monde Informatique) et participe à des forums techniques sur l'administration système.</p>
+        </div>
 
         <div class="articles-grid">
             
-            <!-- Article 1 : IPv6 -->
             <article class="article-card">
-                <span class="article-source">🌐 ARCEP</span>
-                <h2 class="article-title">L'état du déploiement de l'IPv6 en France</h2>
-                <p class="article-excerpt">"La pénurie d'adresses IPv4 est désormais une réalité concrète. La transition vers IPv6 devient impérative pour garantir la continuité de la croissance d'Internet et l'innovation des services connectés..."</p>
-                <a href="https://www.arcep.fr/la-regulation/grands-dossiers-reseaux-mobiles/le-passage-a-ipv6.html" target="_blank" class="read-more">Lire l'article complet →</a>
+                <span class="article-source">🌐 Réseaux / ARCEP</span>
+                <h2 class="article-title">Déploiement de l'IPv6 en France</h2>
+                <p class="article-excerpt">Suivi de la transition impérative vers IPv6 pour pallier la pénurie d'adresses IPv4. Analyse des impacts sur les configurations DNS et DHCP en entreprise.</p>
+                <a href="https://www.arcep.fr/la-regulation/grands-dossiers-reseaux-mobiles/le-passage-a-ipv6.html" target="_blank" class="read-more">Consulter la source →</a>
             </article>
 
-            <!-- Article 2 : Wi-Fi 7 -->
             <article class="article-card">
-                <span class="article-source">📶 Wi-Fi Alliance</span>
-                <h2 class="article-title">Wi-Fi 7 : La révolution du très haut débit sans fil</h2>
-                <p class="article-excerpt">"Basé sur la norme IEEE 802.11be, le Wi-Fi 7 promet des débits théoriques atteignant 46 Gbps, une latence ultra-faible et une meilleure gestion des interférences grâce à l'utilisation de la bande 6 GHz..."</p>
-                <a href="https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7" target="_blank" class="read-more">Lire l'article complet →</a>
+                <span class="article-source">🖥️ Microsoft / IT-Connect</span>
+                <h2 class="article-title">Sécurité Active Directory & GPO</h2>
+                <p class="article-excerpt">Étude des nouvelles fonctionnalités de Windows Server 2025 et des bonnes pratiques de durcissement (Hardening) pour protéger l'AD contre les attaques par mouvement latéral.</p>
+                <a href="https://www.it-connect.fr/" target="_blank" class="read-more">Consulter la source →</a>
             </article>
 
-            <!-- Article 3 : Zero Trust -->
             <article class="article-card">
-                <span class="article-source">🛡️ ANSSI / Cybermalveillance</span>
-                <h2 class="article-title">Le modèle Zero Trust : Ne jamais faire confiance</h2>
-                <p class="article-excerpt">"Le modèle de sécurité périmétrique traditionnel est obsolète. L'approche Zero Trust (ZTNA) part du principe qu'aucune entité, interne ou externe au réseau, ne doit être approuvée par défaut sans vérification continue..."</p>
-                <a href="https://www.ssi.gouv.fr/" target="_blank" class="read-more">Lire l'article complet →</a>
+                <span class="article-source">🛡️ Stormshield / ANSSI</span>
+                <h2 class="article-title">Évolution du filtrage et Zero Trust</h2>
+                <p class="article-excerpt">Analyse de l'évolution des pare-feux Stormshield vers le modèle Zero Trust Network Access (ZTNA) pour sécuriser les accès VPN et le télétravail.</p>
+                <a href="https://www.stormshield.com/fr/" target="_blank" class="read-more">Consulter la source →</a>
             </article>
 
-            <!-- Article 4 : HTTP/3 -->
             <article class="article-card">
-                <span class="article-source">⚡ Cloudflare Blog</span>
-                <h2 class="article-title">HTTP/3 et QUIC : Accélérer le Web moderne</h2>
-                <p class="article-excerpt">"HTTP/3 est la prochaine itération majeure du protocole de transfert hypertexte. Contrairement à ses prédécesseurs basés sur TCP, il utilise QUIC (sur UDP) pour réduire la latence de connexion et éviter le blocage de tête de ligne..."</p>
-                <a href="https://blog.cloudflare.com/fr-fr/http3-the-past-present-and-future-fr-fr/" target="_blank" class="read-more">Lire l'article complet →</a>
+                <span class="article-source">🎫 Teclib / GLPI Project</span>
+                <h2 class="article-title">Innovation dans l'ITSM avec GLPI 10</h2>
+                <p class="article-excerpt">Découverte des nouvelles interfaces de gestion de parc et de l'intégration native de l'inventaire automatique, optimisant la réponse aux incidents (Compétence 2).</p>
+                <a href="https://glpi-project.org/fr/" target="_blank" class="read-more">Consulter la source →</a>
             </article>
 
-            <!-- Article 5 : SD-WAN -->
             <article class="article-card">
-                <span class="article-source">☁️ Cisco Networking</span>
-                <h2 class="article-title">L'essor du SD-WAN dans les entreprises</h2>
-                <p class="article-excerpt">"Le SD-WAN (Software-Defined Wide Area Network) transforme la gestion des réseaux étendus en découplant le plan de contrôle du plan de données, permettant une gestion centralisée et une optimisation dynamique du trafic vers le Cloud..."</p>
-                <a href="https://www.cisco.com/c/fr_fr/solutions/enterprise-networks/sd-wan/what-is-sd-wan.html" target="_blank" class="read-more">Lire l'article complet →</a>
+                <span class="article-source">📺 Xibo / Digital Signage</span>
+                <h2 class="article-title">Affichage Dynamique & Conteneurisation</h2>
+                <p class="article-excerpt">Veille sur l'optimisation des performances des Players Xibo sous Linux et l'utilisation de Docker pour le déploiement rapide de flottes d'écrans.</p>
+                <a href="https://xibosignage.com/" target="_blank" class="read-more">Consulter la source →</a>
+            </article>
+
+            <article class="article-card">
+                <span class="article-source">⚙️ Déploiement / Microsoft</span>
+                <h2 class="article-title">L'avenir du Mastering avec Windows Autopilot</h2>
+                <p class="article-excerpt">Comparaison entre les méthodes traditionnelles (WDS/MDT) et les solutions de déploiement moderne basées sur le cloud pour la réinitialisation des PC.</p>
+                <a href="https://learn.microsoft.com/fr-fr/mem/autopilot/" target="_blank" class="read-more">Consulter la source →</a>
             </article>
 
         </div>
