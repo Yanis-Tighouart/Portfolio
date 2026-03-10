@@ -1,4 +1,4 @@
-/* style.css - Version Design Modernisé */
+/* style.css - Version Complète et Optimisée */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
@@ -24,7 +24,7 @@ body {
     background-attachment: fixed;
 }
 
-/* Navigation */
+/* --- NAVIGATION --- */
 nav {
     background: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(10px);
@@ -71,7 +71,7 @@ nav a:hover::after, nav a.active::after {
     width: 100%;
 }
 
-/* Hero Section (En-tête) */
+/* --- HEADER & HERO --- */
 header {
     text-align: center;
     padding: 4rem 1rem;
@@ -121,14 +121,13 @@ h2 {
     display: block;
 }
 
-/* Conteneur principal */
+/* --- CONTENEUR & GRILLES --- */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-/* Section Présentation Onglets (Cartes) */
 .overview-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -143,6 +142,8 @@ h2 {
     border: 1px solid rgba(255,255,255,0.05);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
+    text-decoration: none;
+    display: block;
 }
 
 .overview-card:hover {
@@ -151,24 +152,30 @@ h2 {
     border-color: var(--primary);
 }
 
-.overview-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
-.overview-card p { font-size: 0.9rem; color: var(--text-dim); }
-
-/* Tableau de Compétences Style "Terminal" */
+/* --- TABLEAU STYLE TERMINAL --- */
 .table-container {
     background: #1e1e1e;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     border: 1px solid #333;
+    margin-top: 2rem;
 }
 
 .terminal-header {
     background: #2d2d2d;
     padding: 10px 15px;
     display: flex;
+    align-items: center;
     gap: 8px;
     border-bottom: 1px solid #333;
+}
+
+.terminal-title {
+    color: #888;
+    font-size: 0.8rem;
+    font-family: monospace;
+    margin-left: 10px;
 }
 
 .dot { width: 12px; height: 12px; border-radius: 50%; }
@@ -195,18 +202,19 @@ th {
     letter-spacing: 1px;
 }
 
-td { color: var(--text-dim); }
+td { color: var(--text-dim); font-size: 0.9rem; }
 tr:hover td { color: var(--text-light); background: rgba(255,255,255,0.02); }
 
-/* Animations */
+/* --- ANIMATIONS --- */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    nav ul { gap: 1rem; font-size: 0.9rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.2rem; }
+    nav ul { gap: 1rem; font-size: 0.8rem; }
+    .container { padding: 1rem; }
 }
-
