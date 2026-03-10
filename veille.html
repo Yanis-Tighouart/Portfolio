@@ -71,15 +71,6 @@
             font-size: 0.85rem;
             margin-top: auto;
         }
-
-        .methodology-box {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid var(--primary);
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            color: var(--text-light);
-        }
     </style>
 </head>
 <body>
@@ -95,50 +86,45 @@
 
     <div class="container">
         <header style="padding: 2rem 0; text-align: center;">
-            <h1>Veille Technologique</h1>
-            <p style="color: #94a3b8;">Analyse des innovations récentes en systèmes, réseaux et cybersécurité.</p>
+            <h1>Veille Technologique Active</h1>
+            <p style="color: #94a3b8;">Analyse des failles critiques, évolutions majeures et conflits technologiques du secteur.</p>
         </header>
-
-        <div class="methodology-box">
-            <h3>🛠️ Méthodologie & Outils</h3>
-            <p>Ma veille repose sur l'analyse de l'actualité via les bulletins de sécurité officiels et les documentations constructeurs. L'objectif est d'anticiper les ruptures technologiques pour adapter les infrastructures existantes.</p>
-        </div>
 
         <div class="articles-grid">
             
             <article class="article-card">
-                <span class="article-source">🌐 ARCEP</span>
-                <h2 class="article-title">Observatoire du passage à l'IPv6</h2>
-                <p class="article-excerpt">Suivi officiel de la pénurie d'adresses IPv4 en France et des indicateurs de déploiement d'IPv6 chez les opérateurs et entreprises.</p>
-                <a href="https://www.arcep.fr/la-regulation/grands-dossiers-reseaux-mobiles/le-passage-a-ipv6.html" target="_blank" class="read-more">Accéder à l'observatoire →</a>
+                <span class="article-source">🌐 ARCEP - Décembre 2024</span>
+                <h2 class="article-title">IPv6 : L'extinction programmée de l'IPv4</h2>
+                <p class="article-excerpt">L'ARCEP alerte sur la fin des réserves IPv4. Les entreprises sont désormais contraintes d'activer l'IPv6 pour ne pas subir de dégradation de connectivité. En 2025, le taux de pénétration dépasse les 75% chez les opérateurs fixes.</p>
+                <a href="https://www.arcep.fr/la-regulation/grands-dossiers-reseaux-mobiles/le-passage-a-ipv6.html" target="_blank" class="read-more">Lire le rapport complet →</a>
             </article>
 
             <article class="article-card">
-                <span class="article-source">🖥️ Microsoft News</span>
-                <h2 class="article-title">Nouveautés de Windows Server 2025</h2>
-                <p class="article-excerpt">Focus sur le "Hotpatching" et les améliorations de l'Active Directory pour la prochaine génération de serveurs d'entreprise.</p>
-                <a href="https://learn.microsoft.com/fr-fr/windows-server/get-started/whats-new-in-windows-server-2025" target="_blank" class="read-more">Consulter les nouveautés →</a>
+                <span class="article-source">🖥️ Cyberveille / ANSSI</span>
+                <h2 class="article-title">Faille Critique Windows RDL (CVE-2024-38077)</h2>
+                <p class="article-excerpt">Alerte sur une vulnérabilité RCE (Remote Code Execution) touchant Windows Server (AD/RDP). Une exécution de code à distance est possible sans authentification, forçant une mise à jour d'urgence des infrastructures serveurs.</p>
+                <a href="https://www.cyberveille-sante.gouv.fr/alertes/alerte-vulnerabilite-critique-dans-windows-server-2024-07-25" target="_blank" class="read-more">Consulter l'alerte technique →</a>
             </article>
 
             <article class="article-card">
                 <span class="article-source">🛡️ Stormshield Blog</span>
-                <h2 class="article-title">Actualités de la Cybersécurité SNS</h2>
-                <p class="article-excerpt">Les dernières évolutions sur le filtrage réseau, la protection contre les ransomwares et la cyber-résilience des infrastructures.</p>
-                <a href="https://www.stormshield.com/fr/blog/" target="_blank" class="read-more">Lire les actualités →</a>
+                <h2 class="article-title">Souveraineté : Stormshield SNS v4.10 vs Marché US</h2>
+                <p class="article-excerpt">Analyse de la mise à jour SNS 4.10 certifiée par l'ANSSI. Stormshield renforce sa position face à Fortinet en proposant une protection contre les attaques par canal auxiliaire (side-channel), cruciale pour les OIV.</p>
+                <a href="https://www.stormshield.com/fr/produits/stormshield-network-security-sns/" target="_blank" class="read-more">Détails de la mise à jour →</a>
             </article>
 
             <article class="article-card">
-                <span class="article-source">🎫 GLPI Project</span>
-                <h2 class="article-title">Évolutions du projet GLPI</h2>
-                <p class="article-excerpt">Suivi des versions majeures et de l'intégration de nouvelles fonctionnalités d'inventaire et de gestion de services (ITSM).</p>
-                <a href="https://glpi-project.org/fr/category/blog-fr/" target="_blank" class="read-more">Voir les publications →</a>
+                <span class="article-source">🎫 GLPI Project - GitHub</span>
+                <h2 class="article-title">Maintenance GLPI : Correctifs de Sécurité Critiques</h2>
+                <p class="article-excerpt">Sortie des versions de maintenance corrigeant des failles d'injection SQL et XSS. Indispensable pour la protection de l'inventaire du parc informatique et de la base de données utilisateurs.</p>
+                <a href="https://glpi-project.org/fr/glpi-10-0-12-disponible/" target="_blank" class="read-more">Notes de version →</a>
             </article>
 
             <article class="article-card">
                 <span class="article-source">⚙️ Microsoft Learn</span>
-                <h2 class="article-title">Modernisation du déploiement Windows</h2>
-                <p class="article-excerpt">Analyse du passage des méthodes traditionnelles (WDS/MDT) vers le provisionnement moderne via le cloud.</p>
-                <a href="https://learn.microsoft.com/fr-fr/mem/autopilot/windows-autopilot" target="_blank" class="read-more">Consulter la documentation →</a>
+                <h2 class="article-title">MDT : Support limité pour Windows 11 24H2</h2>
+                <p class="article-excerpt">Microsoft confirme que le Microsoft Deployment Toolkit (MDT) n'est plus la méthode privilégiée. La transition forcée vers Windows Autopilot marque la fin du "Mastering" traditionnel via PXE au profit du Cloud.</p>
+                <a href="https://learn.microsoft.com/fr-fr/mem/autopilot/windows-autopilot" target="_blank" class="read-more">Analyse du virage stratégique →</a>
             </article>
 
         </div>
