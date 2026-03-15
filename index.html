@@ -17,28 +17,44 @@
         </ul>
     </nav>
 
-    <header>
+    <header class="hero">
         <div class="profile-container">
             <img src="images/photo.jpg" alt="Yanis Tighouart" class="profile-img" onerror="this.src='https://via.placeholder.com/160'">
         </div>
-        <span class="tagline">Apprenti Administrateur Systèmes & Réseaux</span>
+        <span class="tagline">Parcours & Compétences</span>
         <h1>Yanis Tighouart</h1>
-        <h2>Portfolio de compétences BTS SIO SISR</h2>
+        <h2>Futur Administrateur Systèmes & Réseaux</h2>
+        <div class="hero-btns" style="margin-top: 2rem;">
+            <a href="projets.html" class="btn-main">Découvrir mes projets</a>
+            <a href="contact.html" class="btn-sub">Me contacter</a>
+        </div>
     </header>
 
     <div class="container">
+        
+        <section class="about-section" style="text-align: center; margin-bottom: 4rem;">
+            <h3 style="color: var(--accent); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px;">À propos</h3>
+            <p style="max-width: 700px; margin: 1rem auto; color: var(--text-dim);">
+                Étudiant en BTS SIO option SISR, je me passionne pour la gestion des infrastructures et la cybersécurité. 
+                Ce portfolio retrace mon parcours technique et la validation de mes compétences professionnelles.
+            </p>
+        </section>
+
         <section class="overview-grid">
             <div class="overview-card">
+                <div class="icon">⚙️</div>
                 <h3>SISR</h3>
-                <p>Solutions d'infrastructure, systèmes et réseaux.</p>
+                <p>Spécialisation dans les infrastructures et les services réseaux.</p>
             </div>
             <div class="overview-card">
-                <h3>Expertise</h3>
-                <p>Administration Windows/Linux, Sécurité & Virtualisation.</p>
+                <div class="icon">🛡️</div>
+                <h3>Sécurité</h3>
+                <p>Gestion des pare-feux et sécurisation des accès distants.</p>
             </div>
             <div class="overview-card">
-                <h3>Objectif</h3>
-                <p>Validation des blocs de compétences du référentiel.</p>
+                <div class="icon">☁️</div>
+                <h3>Cloud & Virtu</h3>
+                <p>Déploiement de services via Docker et virtualisation serveur.</p>
             </div>
         </section>
 
@@ -60,27 +76,27 @@
                 <tbody>
                     <tr>
                         <td>Gérer le patrimoine</td>
-                        <td><a href="projets.html#patrimoine" style="color: var(--primary); text-decoration: none; font-weight: 600;">GLPI & Windows Server</a></td>
-                        <td>Inventaire de parc, gestion des tickets et Active Directory.</td>
+                        <td><a href="projets.html#patrimoine" class="table-link">GLPI & Windows Server</a></td>
+                        <td>Inventaire de parc, ticketing et Active Directory.</td>
                     </tr>
                     <tr>
                         <td>Répondre aux incidents</td>
-                        <td><a href="projets.html#incidents" style="color: var(--primary); text-decoration: none; font-weight: 600;">GLPI</a></td>
+                        <td><a href="projets.html#incidents" class="table-link">GLPI</a></td>
                         <td>Mise en place d'un workflow de ticketing et SLA.</td>
                     </tr>
                     <tr>
                         <td>Développer la présence</td>
-                        <td><a href="projets.html#presence" style="color: var(--primary); text-decoration: none; font-weight: 600;">Xibo CMS</a></td>
-                        <td>Déploiement de solutions d'affichage dynamique web via Docker.</td>
+                        <td><a href="projets.html#presence" class="table-link">Xibo CMS</a></td>
+                        <td>Affichage dynamique web via Docker.</td>
                     </tr>
                     <tr>
                         <td>Mode projet</td>
-                        <td><a href="projets.html#modeprojet" style="color: var(--primary); text-decoration: none; font-weight: 600;">Stormshield</a></td>
-                        <td>Planification et déploiement de firewalls réseaux.</td>
+                        <td><a href="projets.html#modeprojet" class="table-link">Stormshield</a></td>
+                        <td>Planification et déploiement de firewalls.</td>
                     </tr>
                     <tr>
                         <td>Services & Mise à disposition</td>
-                        <td><a href="projets.html#mastering" style="color: var(--primary); text-decoration: none; font-weight: 600;">Mastering & PXE</a></td>
+                        <td><a href="projets.html#mastering" class="table-link">Mastering & PXE</a></td>
                         <td>Automatisation du déploiement d'images (WDS/MDT).</td>
                     </tr>
                 </tbody>
