@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Yanis Tighouart</title>
+    <title>Yanis Tighouart - Portfolio SISR</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Ajout de la police Poppins pour le style moderne -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -21,90 +19,74 @@
 
     <header>
         <div class="profile-container">
-            <!-- Avatar pro généré avec tes initiales -->
-            <img src="https://ui-avatars.com/api/?name=Yanis+Tighouart&background=3b82f6&color=fff&size=200&bold=true" alt="Yanis Tighouart" class="profile-img">
+            <img src="images/photo.jpg" alt="Yanis Tighouart" class="profile-img" onerror="this.src='https://via.placeholder.com/160'">
         </div>
-        <span class="tagline">Portfolio</span>
+        <span class="tagline">Apprenti Administrateur Systèmes & Réseaux</span>
         <h1>Yanis Tighouart</h1>
-        <h2>Étudiant en Systèmes et Réseaux</h2>
-        <p style="max-width: 600px; margin: 1rem auto; color: var(--text-dim);">
-            Bienvenue sur mon espace numérique. Ce portfolio retrace mes projets, mes compétences techniques ainsi que mes veilles technologiques.
-        </p>
+        <h2>Portfolio de compétences BTS SIO SISR</h2>
     </header>
 
     <div class="container">
-        
-        <!-- Présentation rapide des onglets -->
         <section class="overview-grid">
             <div class="overview-card">
-                <h3>🚀 Projets</h3>
-                <p>Découvrez mes réalisations techniques : Docker, AD, Stormshield...</p>
+                <h3>SISR</h3>
+                <p>Solutions d'infrastructure, systèmes et réseaux.</p>
             </div>
             <div class="overview-card">
-                <h3>📡 Veille Techno</h3>
-                <p>Mes recherches sur l'IPv6 et les évolutions réseaux.</p>
+                <h3>Expertise</h3>
+                <p>Administration Windows/Linux, Sécurité & Virtualisation.</p>
             </div>
             <div class="overview-card">
-                <h3>📬 Contact</h3>
-                <p>Un projet ? Une opportunité ? Discutons-en.</p>
+                <h3>Objectif</h3>
+                <p>Validation des blocs de compétences du référentiel.</p>
             </div>
         </section>
 
-        <section>
-            <h3 style="color: var(--primary); margin-bottom: 1rem;">Tableau de Synthèse des Compétences</h3>
-            
-            <!-- Tableau style Terminal -->
-            <div class="table-container">
-                <div class="terminal-header">
-                    <div class="dot red"></div>
-                    <div class="dot yellow"></div>
-                    <div class="dot green"></div>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Domaine de Compétence</th>
-                            <th>Projet Associé</th>
-                            <th>Détails de réalisation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Gérer le patrimoine</td>
-                            <td>GLPI & Windows Server</td>
-                            <td>Inventaire de parc, gestion des tickets incidents et Active Directory.</td>
-                        </tr>
-                        <tr>
-                            <td>Répondre aux incidents</td>
-                            <td>GLPI</td>
-                            <td>Mise en place d'un workflow de ticketing et SLA.</td>
-                        </tr>
-                        <tr>
-                            <td>Développer la présence</td>
-                            <td>Xibo CMS</td>
-                            <td>Déploiement de solutions d'affichage dynamique web.</td>
-                        </tr>
-                        <tr>
-                            <td>Mode projet</td>
-                            <td>Mastering & PXE</td>
-                            <td>Automatisation du déploiement d'images (WDS/MDT).</td>
-                        </tr>
-                        <tr>
-                            <td>Services réseaux</td>
-                            <td>Windows Server</td>
-                            <td>Configuration DNS, DHCP et rôles essentiels.</td>
-                        </tr>
-                        <tr>
-                            <td>Sécuriser l'infra</td>
-                            <td>Stormshield</td>
-                            <td>Filtrage de paquets, VPN et règles de pare-feu.</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="table-container">
+            <div class="terminal-header">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+                <span class="terminal-title">Tableau de Synthèse des Compétences</span>
             </div>
-        </section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Domaine de compétence</th>
+                        <th>Projet associé</th>
+                        <th>Détails de réalisation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gérer le patrimoine</td>
+                        <td><a href="projets.html#patrimoine" style="color: var(--primary); text-decoration: none; font-weight: 600;">GLPI & Windows Server</a></td>
+                        <td>Inventaire de parc, gestion des tickets et Active Directory.</td>
+                    </tr>
+                    <tr>
+                        <td>Répondre aux incidents</td>
+                        <td><a href="projets.html#incidents" style="color: var(--primary); text-decoration: none; font-weight: 600;">GLPI</a></td>
+                        <td>Mise en place d'un workflow de ticketing et SLA.</td>
+                    </tr>
+                    <tr>
+                        <td>Développer la présence</td>
+                        <td><a href="projets.html#presence" style="color: var(--primary); text-decoration: none; font-weight: 600;">Xibo CMS</a></td>
+                        <td>Déploiement de solutions d'affichage dynamique web via Docker.</td>
+                    </tr>
+                    <tr>
+                        <td>Mode projet</td>
+                        <td><a href="projets.html#modeprojet" style="color: var(--primary); text-decoration: none; font-weight: 600;">Stormshield</a></td>
+                        <td>Planification et déploiement de firewalls réseaux.</td>
+                    </tr>
+                    <tr>
+                        <td>Services & Mise à disposition</td>
+                        <td><a href="projets.html#mastering" style="color: var(--primary); text-decoration: none; font-weight: 600;">Mastering & PXE</a></td>
+                        <td>Automatisation du déploiement d'images (WDS/MDT).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </body>
 </html>
-
