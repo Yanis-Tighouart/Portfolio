@@ -34,10 +34,7 @@
         .project-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
+            top: 0; left: 0; width: 4px; height: 100%;
             background: linear-gradient(to bottom, #3b82f6, #06b6d4);
         }
 
@@ -48,10 +45,7 @@
             flex-wrap: wrap;
         }
 
-        .project-text {
-            flex: 1;
-            min-width: 300px;
-        }
+        .project-text { flex: 1; min-width: 300px; }
 
         .project-image {
             flex: 1;
@@ -62,12 +56,7 @@
             background: #0f172a;
         }
 
-        .project-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s;
-        }
+        .project-image img { width: 100%; height: auto; display: block; }
 
         .competence-badge {
             display: inline-block;
@@ -83,9 +72,7 @@
 
         .tech-stack {
             margin-bottom: 1rem;
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
+            display: flex; gap: 0.5rem; flex-wrap: wrap;
         }
 
         .tech-tag {
@@ -97,25 +84,11 @@
             border: 1px solid rgba(59, 130, 246, 0.3);
         }
 
-        .project-title {
-            color: #f1f5f9;
-            font-size: 1.5rem;
-            margin: 0 0 0.5rem 0;
-            font-weight: 700;
-        }
+        .project-title { color: #f1f5f9; font-size: 1.5rem; margin: 0 0 0.5rem 0; font-weight: 700; }
 
-        .justification {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            border-left: 2px solid rgba(255,255,255,0.1);
-            padding-left: 1rem;
-            margin-top: 1rem;
-        }
+        .description { color: #94a3b8; font-size: 0.95rem; line-height: 1.7; margin-top: 1rem; }
 
-        @media (max-width: 768px) {
-            .project-content { flex-direction: column; }
-        }
+        @media (max-width: 768px) { .project-content { flex-direction: column; } }
     </style>
 </head>
 <body>
@@ -132,7 +105,7 @@
     <div class="container">
         <header style="padding: 2rem 0; text-align: center;">
             <h1>Mes Projets & Compétences</h1>
-            <p style="color: #94a3b8;">Réalisations techniques classées par domaines du référentiel.</p>
+            <p style="color: #94a3b8;">Réalisations classées selon le référentiel BTS SIO SISR.</p>
         </header>
 
         <div class="competence-list">
@@ -145,9 +118,9 @@
                         <div class="tech-stack">
                             <span class="tech-tag">Active Directory</span>
                             <span class="tech-tag">Windows Server</span>
-                            <span class="tech-tag">DNS/DHCP</span>
+                            <span class="tech-tag">Réseau</span>
                         </div>
-                        <p class="justification">Mise en place d'un contrôleur de domaine pour recenser et identifier les ressources numériques. La gestion du DNS et du DHCP assure l'exploitation des référentiels réseaux et des standards adoptés.</p>
+                        <p class="description">Mise en place d'un contrôleur de domaine pour recenser et identifier les ressources numériques. La gestion centralisée via AD assure l'exploitation et la maintenance des référentiels de l'organisation.</p>
                     </div>
                     <div class="project-image">
                         <img src="images/ad-server.png" alt="Capture AD" onerror="this.src='https://via.placeholder.com/400x250?text=Windows+Server+AD'">
@@ -159,13 +132,13 @@
                 <div class="project-content">
                     <div class="project-text">
                         <span class="competence-badge">2. Répondre aux incidents et demandes</span>
-                        <h2 class="project-title">🎫 Gestion des tickets GLPI</h2>
+                        <h2 class="project-title">🎫 Ticketing et Support via GLPI</h2>
                         <div class="tech-stack">
                             <span class="tech-tag">GLPI</span>
-                            <span class="tech-tag">Ticketing</span>
+                            <span class="tech-tag">ITSM</span>
                             <span class="tech-tag">Support</span>
                         </div>
-                        <p class="justification">Utilisation de GLPI pour collecter, suivre et orienter les demandes des utilisateurs. Traitement des incidents systèmes et réseaux en respectant les procédures de l'organisation.</p>
+                        <p class="description">Collecte et suivi des demandes d'assistance des utilisateurs. Résolution d'incidents systèmes et réseaux en respectant les délais et les procédures de maintenance de l'entreprise.</p>
                     </div>
                     <div class="project-image">
                         <img src="images/glpi-dash.png" alt="Capture GLPI" onerror="this.src='https://via.placeholder.com/400x250?text=Gestion+GLPI'">
@@ -177,13 +150,13 @@
                 <div class="project-content">
                     <div class="project-text">
                         <span class="competence-badge">3. Développer la présence en ligne</span>
-                        <h2 class="project-title">📺 Xibo (Affichage dynamique)</h2>
+                        <h2 class="project-title">📺 Solution d'Affichage Dynamique Xibo</h2>
                         <div class="tech-stack">
                             <span class="tech-tag">Xibo CMS</span>
-                            <span class="tech-tag">Contenu Web</span>
+                            <span class="tech-tag">Docker</span>
                             <span class="tech-tag">Communication</span>
                         </div>
-                        <p class="justification">Valorisation de l'image de l'organisation à travers la diffusion de contenus numériques via Xibo. Participation à l'évolution de la communication interne de l'entreprise.</p>
+                        <p class="description">Déploiement du CMS Xibo via des conteneurs <strong>Docker</strong> pour assurer la diffusion de contenus numériques. Ce projet valorise l'image de l'organisation en modernisant sa communication interne sur ses sites distants.</p>
                     </div>
                     <div class="project-image">
                         <img src="images/xibo-docker.png" alt="Capture Xibo" onerror="this.src='https://via.placeholder.com/400x250?text=Affichage+Xibo'">
@@ -195,16 +168,16 @@
                 <div class="project-content">
                     <div class="project-text">
                         <span class="competence-badge">4. Travailler en mode projet</span>
-                        <h2 class="project-title">🚀 Déploiement Xibo via Docker</h2>
+                        <h2 class="project-title">🛡️ Sécurisation avec Stormshield</h2>
                         <div class="tech-stack">
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Debian</span>
-                            <span class="tech-tag">Planification</span>
+                            <span class="tech-tag">Firewall</span>
+                            <span class="tech-tag">VPN</span>
+                            <span class="tech-tag">Sécurité</span>
                         </div>
-                        <p class="justification">Analyse des objectifs du besoin d'affichage dynamique, planification des étapes d'installation (Debian/Docker) et évaluation du succès du déploiement final.</p>
+                        <p class="description">Planification et déploiement de pare-feux Stormshield pour sécuriser les flux réseaux. Analyse des besoins de filtrage et évaluation des mesures de protection contre les intrusions.</p>
                     </div>
                     <div class="project-image">
-                        <img src="images/xibo-docker.png" alt="Capture Docker" onerror="this.src='https://via.placeholder.com/400x250?text=Projet+Docker'">
+                        <img src="images/stormshield.png" alt="Capture Stormshield" onerror="this.src='https://via.placeholder.com/400x250?text=Projet+Stormshield'">
                     </div>
                 </div>
             </article>
@@ -213,22 +186,25 @@
                 <div class="project-content">
                     <div class="project-text">
                         <span class="competence-badge">5. Mettre à disposition un service</span>
-                        <h2 class="project-title">⚙️ Mastering, Mises à jour & Stormshield</h2>
+                        <h2 class="project-title">⚙️ Mastering et Déploiement Poste de Travail</h2>
                         <div class="tech-stack">
-                            <span class="tech-tag">PXE/WDS</span>
-                            <span class="tech-tag">Stormshield</span>
-                            <span class="tech-tag">VPN</span>
+                            <span class="tech-tag">PXE / WDS</span>
+                            <span class="tech-tag">Mastering</span>
+                            <span class="tech-tag">Windows 11</span>
                         </div>
-                        <p class="justification">Déploiement d'images systèmes automatisées (Mastering) et sécurisation des accès via Stormshield. Réalisation des tests d'intégration pour garantir la mise en service optimale aux utilisateurs.</p>
+                        <p class="description">Automatisation du déploiement des postes de travail via des images systèmes standardisées (Mastering). Ce service garantit aux utilisateurs un environnement de travail opérationnel et homogène dès la mise en service.</p>
                     </div>
                     <div class="project-image">
-                        <img src="images/stormshield.png" alt="Capture Mastering" onerror="this.src='https://via.placeholder.com/400x250?text=Mastering+et+Services'">
+                        <img src="images/ad-server.png" alt="Capture Mastering" onerror="this.src='https://via.placeholder.com/400x250?text=Mastering+Système'">
                     </div>
                 </div>
             </article>
 
         </div>
     </div>
+
+</body>
+</html>
 
 </body>
 </html>
