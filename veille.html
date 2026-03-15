@@ -25,6 +25,7 @@
             flex-direction: column;
             position: relative;
             overflow: hidden;
+            min-height: 280px;
         }
 
         .article-card:hover {
@@ -54,6 +55,7 @@
             font-size: 1.2rem;
             margin: 0 0 1rem 0;
             font-weight: 700;
+            line-height: 1.4;
         }
 
         .article-excerpt {
@@ -62,6 +64,7 @@
             margin-bottom: 1.5rem;
             border-left: 2px solid rgba(59, 130, 246, 0.3);
             padding-left: 1rem;
+            flex-grow: 1;
         }
 
         .read-more {
@@ -70,6 +73,22 @@
             font-weight: 600;
             font-size: 0.85rem;
             margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .methodology-box {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid #3b82f6;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            color: #f1f5f9;
         }
     </style>
 </head>
@@ -87,44 +106,42 @@
     <div class="container">
         <header style="padding: 2rem 0; text-align: center;">
             <h1>Veille Technologique Active</h1>
-            <p style="color: #94a3b8;">Analyse des innovations techniques, de la concurrence et des évolutions du secteur IT.</p>
+            <p style="color: #94a3b8;">Analyse des innovations, des failles critiques et de l'évolution des protocoles réseaux.</p>
         </header>
+
+        <div class="methodology-box">
+            <h3 style="margin-top: 0;">🛠️ Méthodologie & Outils</h3>
+            <p style="margin-bottom: 0;">Ma veille repose sur la surveillance des vulnérabilités émergentes et l'analyse des mutations technologiques. J'utilise des sources de référence comme <strong>Le Monde Informatique</strong>, <strong>ZDNet</strong> et les comparatifs éditeurs pour adapter ma pratique aux enjeux actuels de la cybersécurité.</p>
+        </div>
 
         <div class="articles-grid">
             
             <article class="article-card">
-                <span class="article-source">🌐 ARCEP - Décembre 2024</span>
-                <h2 class="article-title">IPv6 : L'extinction programmée de l'IPv4</h2>
-                <p class="article-excerpt">L'ARCEP alerte sur la fin imminente des réserves IPv4. Les entreprises doivent accélérer leur transition pour éviter des coûts d'achat d'adresses IPv4 sur le marché secondaire qui explosent en 2025.</p>
-                <a href="https://www.arcep.fr/la-regulation/grands-dossiers-reseaux-mobiles/le-passage-a-ipv6.html" target="_blank" class="read-more">Lire le rapport complet →</a>
+                <span class="article-source">📺 Yodeck / Comparatif Marché</span>
+                <h2 class="article-title">Xibo vs Yodeck : Quelle alternative pour l'affichage dynamique ?</h2>
+                <p class="article-excerpt">Analyse comparative des fonctionnalités et des coûts. Ce sujet met en perspective le choix de la solution Open-Source Xibo face aux modèles SaaS propriétaires comme Yodeck pour la communication digitale.</p>
+                <a href="https://www.yodeck.com/the-professional-affordable-xibo-alternative/" target="_blank" class="read-more">Lire l'analyse comparative →</a>
             </article>
 
             <article class="article-card">
-                <span class="article-source">📺 Digital Signage Today / Comparatif</span>
-                <h2 class="article-title">Xibo vs ScreenCloud : Open-Source vs SaaS</h2>
-                <p class="article-excerpt">Analyse du marché de l'affichage dynamique. Tandis que ScreenCloud domine le secteur SaaS propriétaire, Xibo v4 se démarque par sa souveraineté de stockage et sa flexibilité d'hébergement via Docker, réduisant les coûts de 60% pour les PME.</p>
-                <a href="https://xibosignage.com/blog/xibo-v4-0-0-released" target="_blank" class="read-more">Analyse des nouveautés Xibo v4 →</a>
+                <span class="article-source">🌐 ZDNet / Réseaux</span>
+                <h2 class="article-title">La France championne du monde de la migration vers l'IPv6</h2>
+                <p class="article-excerpt">Analyse du leadership français dans le déploiement de l'IPv6. Cet article souligne l'accélération de la transition réseau pour pallier la pénurie d'adresses IPv4 à l'échelle nationale.</p>
+                <a href="https://www.zdnet.fr/actualites/la-france-championne-du-monde-de-la-migration-vers-lipv6-478703.htm" target="_blank" class="read-more">Consulter l'article ZDNet →</a>
             </article>
 
             <article class="article-card">
-                <span class="article-source">🛡️ Stormshield Blog</span>
-                <h2 class="article-title">Souveraineté : SNS v4.10 face au marché US</h2>
-                <p class="article-excerpt">Mise à jour majeure certifiée par l'ANSSI. Stormshield renforce sa cybersécurité souveraine face à Fortinet en intégrant des mécanismes avancés de protection contre les vulnérabilités par déni de service (DoS).</p>
-                <a href="https://www.stormshield.com/fr/produits/stormshield-network-security-sns/" target="_blank" class="read-more">Détails de la mise à jour →</a>
+                <span class="article-source">🛡️ Le Monde Informatique / Sécurité</span>
+                <h2 class="article-title">L'IA transforme les DNS fantômes en vecteur d'exfiltration</h2>
+                <p class="article-excerpt">Étude sur une méthode d'attaque utilisant l'IA pour automatiser l'exfiltration de données via le protocole DNS. Un enjeu majeur pour la surveillance des flux sur les serveurs Windows Server.</p>
+                <a href="https://www.lemondeinformatique.fr/actualites/lire-l-ia-transforme-les-dns-fantomes-en-vecteur-d-exfiltration-de-donnees-99572.html" target="_blank" class="read-more">Lire l'article technique →</a>
             </article>
 
             <article class="article-card">
-                <span class="article-source">🎫 GLPI Project - Notes de version</span>
-                <h2 class="article-title">GLPI 10.0.12 : Correctifs de failles critiques</h2>
-                <p class="article-excerpt">Publication de correctifs urgents pour des vulnérabilités XSS et SQL. Maintenir GLPI à jour est crucial pour garantir l'intégrité de la base de données de l'inventaire et des tickets d'assistance.</p>
-                <a href="https://glpi-project.org/fr/glpi-10-0-12-disponible/" target="_blank" class="read-more">Notes de version officielles →</a>
-            </article>
-
-            <article class="article-card">
-                <span class="article-source">⚙️ Microsoft Learn</span>
-                <h2 class="article-title">L'abandon définitif de MDT pour Windows 11</h2>
-                <p class="article-excerpt">Microsoft confirme que le Microsoft Deployment Toolkit (MDT) n'est plus compatible avec les dernières versions 24H2. La stratégie de déploiement bascule totalement vers le provisionnement Cloud via Intune et Autopilot.</p>
-                <a href="https://learn.microsoft.com/fr-fr/mem/autopilot/windows-autopilot" target="_blank" class="read-more">Comprendre le virage stratégique →</a>
+                <span class="article-source">⚡ Le Monde Informatique / Cyber</span>
+                <h2 class="article-title">Cisco corrige en urgence des failles critiques dans ses firewalls</h2>
+                <p class="article-excerpt">Focus sur la correction de vulnérabilités critiques permettant l'exécution de code à distance. Cette veille souligne l'importance de la réactivité dans le déploiement des correctifs sur les équipements périmétriques.</p>
+                <a href="https://www.lemondeinformatique.fr/actualites/lire-cisco-corrige-en-urgence-des-failles-critiques-dans-ses-pare-feux-99559.html" target="_blank" class="read-more">Consulter l'alerte Cisco →</a>
             </article>
 
         </div>
