@@ -7,87 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        .competence-list {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-            margin-top: 2rem;
-            padding-bottom: 4rem;
-        }
-
-        .project-card {
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 15px;
-            padding: 2rem;
-            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #3b82f6;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 4px; height: 100%;
-            background: linear-gradient(to bottom, #3b82f6, #06b6d4);
-        }
-
-        .project-content {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
+        .competence-list { display: flex; flex-direction: column; gap: 3rem; margin-top: 2rem; padding-bottom: 4rem; }
+        .project-card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.05); border-radius: 15px; padding: 2rem; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; scroll-margin-top: 100px; }
+        .project-card:hover { transform: translateY(-5px); border-color: #3b82f6; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .project-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(to bottom, #3b82f6, #06b6d4); }
+        .project-content { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
         .project-text { flex: 1; min-width: 300px; }
-
-        .project-image {
-            flex: 1;
-            min-width: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
-            background: #0f172a;
-        }
-
+        .project-image { flex: 1; min-width: 300px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); background: #0f172a; }
         .project-image img { width: 100%; height: auto; display: block; }
-
-        .competence-badge {
-            display: inline-block;
-            background: rgba(6, 182, 212, 0.1);
-            color: #06b6d4;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(6, 182, 212, 0.2);
-        }
-
-        .tech-stack {
-            margin-bottom: 1rem;
-            display: flex; gap: 0.5rem; flex-wrap: wrap;
-        }
-
-        .tech-tag {
-            background: rgba(59, 130, 246, 0.2);
-            color: #3b82f6;
-            font-size: 0.75rem;
-            padding: 2px 8px;
-            border-radius: 4px;
-            border: 1px solid rgba(59, 130, 246, 0.3);
-        }
-
+        .competence-badge { display: inline-block; background: rgba(6, 182, 212, 0.1); color: #06b6d4; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; border: 1px solid rgba(6, 182, 212, 0.2); }
+        .tech-stack { margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .tech-tag { background: rgba(59, 130, 246, 0.2); color: #3b82f6; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.3); }
         .project-title { color: #f1f5f9; font-size: 1.5rem; margin: 0 0 0.5rem 0; font-weight: 700; }
-
         .description { color: #94a3b8; font-size: 0.95rem; line-height: 1.7; margin-top: 1rem; }
-
         @media (max-width: 768px) { .project-content { flex-direction: column; } }
     </style>
 </head>
@@ -110,101 +42,68 @@
 
         <div class="competence-list">
             
-            <article class="project-card">
+            <article class="project-card" id="patrimoine">
                 <div class="project-content">
                     <div class="project-text">
                         <span class="competence-badge">1. Gérer le patrimoine informatique</span>
                         <h2 class="project-title">🖥️ Windows Server (AD, DHCP, DNS)</h2>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Active Directory</span>
-                            <span class="tech-tag">Windows Server</span>
-                            <span class="tech-tag">Réseau</span>
-                        </div>
+                        <div class="tech-stack"><span class="tech-tag">Active Directory</span><span class="tech-tag">Windows Server</span><span class="tech-tag">Réseau</span></div>
                         <p class="description">Mise en place d'un contrôleur de domaine pour recenser et identifier les ressources numériques. La gestion centralisée via AD assure l'exploitation et la maintenance des référentiels de l'organisation.</p>
                     </div>
-                    <div class="project-image">
-                        <img src="images/ad-server.png" alt="Capture AD" onerror="this.src='https://via.placeholder.com/400x250?text=Windows+Server+AD'">
-                    </div>
+                    <div class="project-image"><img src="images/ad-server.png" alt="Capture AD" onerror="this.src='https://via.placeholder.com/400x250?text=Windows+Server+AD'"></div>
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" id="incidents">
                 <div class="project-content">
                     <div class="project-text">
                         <span class="competence-badge">2. Répondre aux incidents et demandes</span>
                         <h2 class="project-title">🎫 Ticketing et Support via GLPI</h2>
-                        <div class="tech-stack">
-                            <span class="tech-tag">GLPI</span>
-                            <span class="tech-tag">ITSM</span>
-                            <span class="tech-tag">Support</span>
-                        </div>
-                        <p class="description">Collecte et suivi des demandes d'assistance des utilisateurs. Résolution d'incidents systèmes et réseaux en respectant les délais et les procédures de maintenance de l'entreprise.</p>
+                        <div class="tech-stack"><span class="tech-tag">GLPI</span><span class="tech-tag">ITSM</span><span class="tech-tag">Support</span></div>
+                        <p class="description">Collecte et suivi des demandes d'assistance des utilisateurs. Résolution d'incidents systèmes et réseaux en respectant les procédures de maintenance de l'entreprise.</p>
                     </div>
-                    <div class="project-image">
-                        <img src="images/glpi-dash.png" alt="Capture GLPI" onerror="this.src='https://via.placeholder.com/400x250?text=Gestion+GLPI'">
-                    </div>
+                    <div class="project-image"><img src="images/glpi-dash.png" alt="Capture GLPI" onerror="this.src='https://via.placeholder.com/400x250?text=Gestion+GLPI'"></div>
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" id="presence">
                 <div class="project-content">
                     <div class="project-text">
                         <span class="competence-badge">3. Développer la présence en ligne</span>
                         <h2 class="project-title">📺 Solution d'Affichage Dynamique Xibo</h2>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Xibo CMS</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Communication</span>
-                        </div>
-                        <p class="description">Déploiement du CMS Xibo via des conteneurs <strong>Docker</strong> pour assurer la diffusion de contenus numériques. Ce projet valorise l'image de l'organisation en modernisant sa communication interne sur ses sites distants.</p>
+                        <div class="tech-stack"><span class="tech-tag">Xibo CMS</span><span class="tech-tag">Docker</span><span class="tech-tag">Communication</span></div>
+                        <p class="description">Déploiement du CMS Xibo via des conteneurs <strong>Docker</strong> pour assurer la diffusion de contenus numériques. Ce projet valorise l'image de l'organisation en modernisant sa communication interne.</p>
                     </div>
-                    <div class="project-image">
-                        <img src="images/xibo-docker.png" alt="Capture Xibo" onerror="this.src='https://via.placeholder.com/400x250?text=Affichage+Xibo'">
-                    </div>
+                    <div class="project-image"><img src="images/xibo-docker.png" alt="Capture Xibo" onerror="this.src='https://via.placeholder.com/400x250?text=Affichage+Xibo'"></div>
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" id="modeprojet">
                 <div class="project-content">
                     <div class="project-text">
                         <span class="competence-badge">4. Travailler en mode projet</span>
                         <h2 class="project-title">🛡️ Sécurisation avec Stormshield</h2>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Firewall</span>
-                            <span class="tech-tag">VPN</span>
-                            <span class="tech-tag">Sécurité</span>
-                        </div>
-                        <p class="description">Planification et déploiement de pare-feux Stormshield pour sécuriser les flux réseaux. Analyse des besoins de filtrage et évaluation des mesures de protection contre les intrusions.</p>
+                        <div class="tech-stack"><span class="tech-tag">Firewall</span><span class="tech-tag">VPN</span><span class="tech-tag">Sécurité</span></div>
+                        <p class="description">Planification et déploiement de pare-feux Stormshield pour sécuriser les flux réseaux. Analyse des besoins de filtrage et évaluation des mesures de protection.</p>
                     </div>
-                    <div class="project-image">
-                        <img src="images/stormshield.png" alt="Capture Stormshield" onerror="this.src='https://via.placeholder.com/400x250?text=Projet+Stormshield'">
-                    </div>
+                    <div class="project-image"><img src="images/stormshield.png" alt="Capture Stormshield" onerror="this.src='https://via.placeholder.com/400x250?text=Projet+Stormshield'"></div>
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" id="mastering">
                 <div class="project-content">
                     <div class="project-text">
                         <span class="competence-badge">5. Mettre à disposition un service</span>
                         <h2 class="project-title">⚙️ Mastering et Déploiement Poste de Travail</h2>
-                        <div class="tech-stack">
-                            <span class="tech-tag">PXE / WDS</span>
-                            <span class="tech-tag">Mastering</span>
-                            <span class="tech-tag">Windows 11</span>
-                        </div>
-                        <p class="description">Automatisation du déploiement des postes de travail via des images systèmes standardisées (Mastering). Ce service garantit aux utilisateurs un environnement de travail opérationnel et homogène dès la mise en service.</p>
+                        <div class="tech-stack"><span class="tech-tag">PXE / WDS</span><span class="tech-tag">Mastering</span><span class="tech-tag">Windows 11</span></div>
+                        <p class="description">Automatisation du déploiement des postes de travail via des images systèmes standardisées. Ce service garantit aux utilisateurs un environnement de travail opérationnel.</p>
                     </div>
-                    <div class="project-image">
-                        <img src="images/mastering.png" alt="Capture Mastering" onerror="this.src='https://via.placeholder.com/400x250?text=Mastering+Système'">
-                    </div>
+                    <div class="project-image"><img src="images/mastering.png" alt="Capture Mastering" onerror="this.src='https://via.placeholder.com/400x250?text=Mastering+Système'"></div>
                 </div>
             </article>
 
         </div>
     </div>
-
-</body>
-</html>
 
 </body>
 </html>
