@@ -20,7 +20,17 @@
         .tech-tag { background: rgba(59, 130, 246, 0.2); color: #3b82f6; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.3); }
         .project-title { color: #f1f5f9; font-size: 1.5rem; margin: 0 0 0.5rem 0; font-weight: 700; }
         .description { color: #94a3b8; font-size: 0.95rem; line-height: 1.7; margin-top: 1rem; }
-        @media (max-width: 768px) { .project-content { flex-direction: column; } }
+
+        /* Styles des Modales */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
+        .modal-content { background-color: #1e293b; margin: 5% auto; padding: 2rem; border: 1px solid #3b82f6; border-radius: 15px; width: 80%; max-width: 800px; color: white; position: relative; max-height: 80vh; overflow-y: auto; }
+        .close-modal { color: #94a3b8; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .close-modal:hover { color: #3b82f6; }
+        .modal-table { width: 100%; border-collapse: collapse; margin-top: 1rem; margin-bottom: 2rem; }
+        .modal-table th, .modal-table td { border: 1px solid rgba(255,255,255,0.1); padding: 10px; text-align: left; font-size: 0.9rem; }
+        .modal-table th { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+        
+        @media (max-width: 768px) { .project-content { flex-direction: column; } .modal-content { width: 95%; margin: 10% auto; } }
     </style>
 </head>
 <body>
@@ -48,7 +58,7 @@
                         <span class="competence-badge">1. Gérer le patrimoine informatique</span>
                         <h2 class="project-title">🖥️ Windows Server (AD, DHCP, DNS)</h2>
                         <div class="tech-stack"><span class="tech-tag">Active Directory</span><span class="tech-tag">Windows Server</span><span class="tech-tag">Réseau</span></div>
-                        <p class="description">Mise en place d'un contrôleur de domaine pour recenser et identifier les ressources numériques. La gestion centralisée via AD assure l'exploitation et la maintenance des référentiels de l'organisation.</p>
+                        <p class="description">Mise en place d'un contrôleur de domaine pour recenser et identifier les ressources numériques.</p>
                     </div>
                     <div class="project-image"><img src="images/ad-server.png" alt="Capture AD" onerror="this.src='https://via.placeholder.com/400x250?text=Windows+Server+AD'"></div>
                 </div>
@@ -60,7 +70,7 @@
                         <span class="competence-badge">2. Répondre aux incidents et demandes</span>
                         <h2 class="project-title">🎫 Ticketing et Support via GLPI</h2>
                         <div class="tech-stack"><span class="tech-tag">GLPI</span><span class="tech-tag">ITSM</span><span class="tech-tag">Support</span></div>
-                        <p class="description">Collecte et suivi des demandes d'assistance des utilisateurs. Résolution d'incidents systèmes et réseaux en respectant les procédures de maintenance de l'entreprise.</p>
+                        <p class="description">Collecte et suivi des demandes d'assistance des utilisateurs.</p>
                     </div>
                     <div class="project-image"><img src="images/glpi-dash.png" alt="Capture GLPI" onerror="this.src='https://via.placeholder.com/400x250?text=Gestion+GLPI'"></div>
                 </div>
@@ -72,7 +82,11 @@
                         <span class="competence-badge">3. Développer la présence en ligne</span>
                         <h2 class="project-title">📺 Solution d'Affichage Dynamique Xibo</h2>
                         <div class="tech-stack"><span class="tech-tag">Xibo CMS</span><span class="tech-tag">Docker</span><span class="tech-tag">Communication</span></div>
-                        <p class="description">Déploiement du CMS Xibo via des conteneurs <strong>Docker</strong> pour assurer la diffusion de contenus numériques. Ce projet valorise l'image de l'organisation en modernisant sa communication interne.</p>
+                        <p class="description">Déploiement du CMS Xibo via des conteneurs <strong>Docker</strong>.</p>
+                        <div style="margin-top: 1.5rem; display: flex; gap: 10px;">
+                            <a href="visionneuse.html" class="btn-sub" style="font-size: 0.8rem; padding: 0.6rem 1rem;">Voir le tutoriel PDF</a>
+                            <button onclick="openModal('modalXibo')" class="btn-main" style="font-size: 0.8rem; padding: 0.6rem 1rem; border:none; cursor:pointer;">Gestion de Projet (Gantt/QQOQCP)</button>
+                        </div>
                     </div>
                     <div class="project-image"><img src="images/xibo-docker.png" alt="Capture Xibo" onerror="this.src='https://via.placeholder.com/400x250?text=Affichage+Xibo'"></div>
                 </div>
@@ -84,7 +98,7 @@
                         <span class="competence-badge">4. Travailler en mode projet</span>
                         <h2 class="project-title">🛡️ Sécurisation avec Stormshield</h2>
                         <div class="tech-stack"><span class="tech-tag">Firewall</span><span class="tech-tag">VPN</span><span class="tech-tag">Sécurité</span></div>
-                        <p class="description">Planification et déploiement de pare-feux Stormshield pour sécuriser les flux réseaux. Analyse des besoins de filtrage et évaluation des mesures de protection.</p>
+                        <p class="description">Planification et déploiement de pare-feux Stormshield pour sécuriser les flux réseaux.</p>
                     </div>
                     <div class="project-image"><img src="images/stormshield.png" alt="Capture Stormshield" onerror="this.src='https://via.placeholder.com/400x250?text=Projet+Stormshield'"></div>
                 </div>
@@ -96,14 +110,83 @@
                         <span class="competence-badge">5. Mettre à disposition un service</span>
                         <h2 class="project-title">⚙️ Mastering et Déploiement Poste de Travail</h2>
                         <div class="tech-stack"><span class="tech-tag">PXE / WDS</span><span class="tech-tag">Mastering</span><span class="tech-tag">Windows 11</span></div>
-                        <p class="description">Automatisation du déploiement des postes de travail via des images systèmes standardisées. Ce service garantit aux utilisateurs un environnement de travail opérationnel.</p>
+                        <p class="description">Automatisation du déploiement des postes de travail via des images systèmes standardisées.</p>
+                        <div style="margin-top: 1.5rem;">
+                            <button onclick="openModal('modalMastering')" class="btn-main" style="font-size: 0.8rem; padding: 0.6rem 1rem; border:none; cursor:pointer;">Gestion de Projet (Gantt/QQOQCP)</button>
+                        </div>
                     </div>
                     <div class="project-image"><img src="images/mastering.png" alt="Capture Mastering" onerror="this.src='https://via.placeholder.com/400x250?text=Mastering+Système'"></div>
                 </div>
             </article>
-
         </div>
     </div>
+
+    <div id="modalXibo" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modalXibo')">&times;</span>
+            <h2 style="color: #3b82f6;">📊 Analyse & Planification : Projet Xibo</h2>
+            <hr style="border: 0.5px solid rgba(255,255,255,0.1); margin: 1rem 0;">
+            
+            <h3>1. QQOQCP</h3>
+            <table class="modal-table">
+                <tr><th>Quoi ?</th><td>Mise en place d'un CMS d'affichage dynamique multimédia.</td></tr>
+                <tr><th>Qui ?</th><td>Technicien SISR pour le service Communication.</td></tr>
+                <tr><th>Où ?</th><td>Serveur Linux interne (Conteneurs Docker).</td></tr>
+                <tr><th>Comment ?</th><td>Docker-Compose, déploiement SQL/CMS, configuration Players.</td></tr>
+                <tr><th>Pourquoi ?</th><td>Centraliser et moderniser la communication interne.</td></tr>
+            </table>
+
+            <h3>2. Diagramme de Gantt (Planning)</h3>
+            <table class="modal-table">
+                <thead><tr><th>Phase</th><th>Tâche</th><th>Durée</th></tr></thead>
+                <tbody>
+                    <tr><td>Étude</td><td>Analyse des besoins et formats média</td><td>2j</td></tr>
+                    <tr><td>Install</td><td>Préparation hôte Docker / Linux</td><td>1j</td></tr>
+                    <tr><td>Déploiement</td><td>Configuration docker-compose & Lancement</td><td>1j</td></tr>
+                    <tr><td>Config</td><td>Création des Layouts et Bibliothèque</td><td>2j</td></tr>
+                    <tr><td>Tests</td><td>Validation de la diffusion sur écran test</td><td>2j</td></tr>
+                    <tr><td>Doc</td><td>Rédaction du tutoriel technique PDF</td><td>2j</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="modalMastering" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modalMastering')">&times;</span>
+            <h2 style="color: #3b82f6;">📊 Analyse & Planification : Projet Mastering</h2>
+            <hr style="border: 0.5px solid rgba(255,255,255,0.1); margin: 1rem 0;">
+            
+            <h3>1. QQOQCP</h3>
+            <table class="modal-table">
+                <tr><th>Quoi ?</th><td>Création d'une image Windows standardisée et automatisée.</td></tr>
+                <tr><th>Qui ?</th><td>Administrateur système pour le support technique.</td></tr>
+                <tr><th>Où ?</th><td>Infrastructure réseau via serveur WDS / PXE.</td></tr>
+                <tr><th>Comment ?</th><td>Capture d'image (Sysprep), injection drivers, déploiement réseau.</td></tr>
+                <tr><th>Pourquoi ?</th><td>Industrialiser le déploiement et garantir un parc homogène.</td></tr>
+            </table>
+
+            <h3>2. Diagramme de Gantt (Planning)</h3>
+            <table class="modal-table">
+                <thead><tr><th>Phase</th><th>Tâche</th><th>Durée</th></tr></thead>
+                <tbody>
+                    <tr><td>Préparation</td><td>Audit logiciel et création du "Master" propre</td><td>3j</td></tr>
+                    <tr><td>Serveur</td><td>Configuration rôles WDS et images de boot</td><td>2j</td></tr>
+                    <tr><td>Drivers</td><td>Injection des pilotes constructeurs (NIC/HDD)</td><td>2j</td></tr>
+                    <tr><td>Tests</td><td>Déploiement PXE sur machines de test</td><td>3j</td></tr>
+                    <tr><td>Final</td><td>Mise en production et validation du service</td><td>1j</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "block"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; }
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') { event.target.style.display = "none"; }
+        }
+    </script>
 
 </body>
 </html>
