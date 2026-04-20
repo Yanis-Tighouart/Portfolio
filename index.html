@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yanis Tighouart - Portfolio SISR</title>
+    <title>Yanis Tighouart - Alternance Administration & Sécurité</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,14 +19,15 @@
 
     <header class="hero-minimal">
         <div class="container">
-            <span class="tagline">Technicien Systèmes & Réseaux</span>
+            <span class="tagline" style="color: var(--accent); font-weight: bold;">RECHERCHE ALTERNANCE - LICENCE PRO ASPUR / ASUR</span>
             <h1>Yanis Tighouart</h1>
             <div class="separator"></div>
-            <h2>Portfolio de Compétences BTS SIO SISR</h2>
+            <h2>Administrateur Systèmes & Réseaux en devenir</h2>
+            <p style="margin-top: 1rem; color: var(--text-dim);">Spécialisation Cybersécurité & Infrastructures</p>
             
             <div class="hero-btns">
-                <a href="projets.html" class="btn-main">Consulter mes projets</a>
-                <a href="contact.html" class="btn-sub">Me contacter</a>
+                <a href="contact.html" class="btn-main">Étudier ma candidature</a>
+                <a href="projets.html" class="btn-sub">Voir mes réalisations</a>
             </div>
         </div>
     </header>
@@ -34,65 +35,55 @@
     <div class="container">
         
         <section class="about-section">
-            <h3 class="section-title">À propos</h3>
+            <h3 class="section-title">Objectif Alternance</h3>
             <p>
-                Étudiant en BTS SIO option SISR, ce portfolio retrace mon parcours technique, 
-                mes projets ainsi que les compétences que j'ai acquises lors de ma formation 
-                en administration d'infrastructures et cybersécurité.
+                Actuellement en fin de cycle BTS SIO SISR, je prépare mon intégration en <strong>Licence Professionnelle Administration et Sécurité des Systèmes et des Réseaux</strong>. 
+                Je recherche une entreprise pour m'accompagner dans cette spécialisation afin d'approfondir mes compétences en durcissement d'infrastructures et gestion de parcs complexes.
             </p>
         </section>
 
-        <div class="table-container">
-            <div class="terminal-header">
-                <div class="dot red"></div>
-                <div class="dot yellow"></div>
-                <div class="dot green"></div>
-                <span class="terminal-title">Tableau de Synthèse des Compétences</span>
+        <section class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 5rem;">
+            <div class="skill-card" style="background: rgba(30, 41, 59, 0.5); padding: 2rem; border-radius: 15px; border: 1px solid rgba(59, 130, 246, 0.2);">
+                <h4 style="color: var(--primary); margin-bottom: 1rem;">🛡️ Sécurité</h4>
+                <ul style="list-style: none; padding: 0; color: var(--text-dim); font-size: 0.9rem; line-height: 2;">
+                    <li>• Firewalling (Stormshield, Pfsense)</li>
+                    <li>• VPN IPsec & SSL</li>
+                    <li>• Analyse de logs & SIEM</li>
+                    <li>• Sensibilisation aux risques (ANSSI)</li>
+                </ul>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Domaine de compétence</th>
-                        <th>Projet associé</th>
-                        <th>Détails de réalisation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Gérer le patrimoine informatique</td>
-                        <td><a href="projets.html#patrimoine" class="table-link">Windows Server</a></td>
-                        <td>Active Directory, DHCP, DNS</td>
-                    </tr>
-                    <tr>
-                        <td>Répondre aux incidents et demandes</td>
-                        <td><a href="projets.html#incidents" class="table-link">GLPI</a></td>
-                        <td>Gestion du Ticketing et workflow support</td>
-                    </tr>
-                    <tr>
-                        <td>Développer la présence en ligne</td>
-                        <td><a href="projets.html#presence" class="table-link">Xibo CMS</a></td>
-                        <td>Affichage dynamique web via Docker</td>
-                    </tr>
-                    <tr>
-                        <td>Travailler en mode projet</td>
-                        <td><a href="projets.html#modeprojet" class="table-link">Stormshield</a></td>
-                        <td>Planification et déploiement de firewalls</td>
-                    </tr>
-                    <tr>
-                        <td>Mettre à disposition un service</td>
-                        <td><a href="projets.html#mastering" class="table-link">Mastering</a></td>
-                        <td>Automatisation et déploiement (WDS/MDT)</td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div class="skill-card" style="background: rgba(30, 41, 59, 0.5); padding: 2rem; border-radius: 15px; border: 1px solid rgba(59, 130, 246, 0.2);">
+                <h4 style="color: var(--primary); margin-bottom: 1rem;">⚙️ Systèmes</h4>
+                <ul style="list-style: none; padding: 0; color: var(--text-dim); font-size: 0.9rem; line-height: 2;">
+                    <li>• Windows Server (AD, DNS, DHCP)</li>
+                    <li>• Administration Linux (Debian, Ubuntu)</li>
+                    <li>• Virtualisation (VMware, Proxmox)</li>
+                    <li>• Conteneurisation (Docker)</li>
+                </ul>
+            </div>
+
+            <div class="skill-card" style="background: rgba(30, 41, 59, 0.5); padding: 2rem; border-radius: 15px; border: 1px solid rgba(59, 130, 246, 0.2);">
+                <h4 style="color: var(--primary); margin-bottom: 1rem;">🌐 Réseaux</h4>
+                <ul style="list-style: none; padding: 0; color: var(--text-dim); font-size: 0.9rem; line-height: 2;">
+                    <li>• Switching & Routing (Cisco)</li>
+                    <li>• Supervision (Zabbix, SNMP)</li>
+                    <li>• Wi-Fi sécurisé (WPA2/3 Enterprise)</li>
+                    <li>• Protocoles IP (IPv4/IPv6)</li>
+                </ul>
+            </div>
+        </section>
+
+        <div style="text-align: center; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1)); padding: 3rem; border-radius: 20px; border: 1px solid rgba(59, 130, 246, 0.2);">
+            <h3 style="margin-bottom: 1rem;">Prêt à renforcer votre équipe technique</h3>
+            <p style="color: var(--text-dim); margin-bottom: 2rem;">Disponible dès septembre 2024 (Rythme à confirmer selon calendrier de la licence).</p>
+            <a href="documents/CV_Yanis_Tighouart.pdf" target="_blank" class="btn-main">📥 Télécharger mon CV</a>
         </div>
-    <div style="margin-top: 5rem; padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
-    <p style="color: var(--text-dim); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-        Consultez le tableau de synthèse des réalisations professionnelles (E4) au format PDF pour une vue d'ensemble détaillée de mes compétences.
-    </p>
-    
- <a href="documents/Tableau_Synthese_Yanis_Tighouart.pdf" target="_blank" class="btn-main" style="display: inline-flex; align-items: center; gap: 10px; justify-content: center;">
-            <span>📊 Tableau de Synthèse (PDF)</span>
-        </a>
-    </div> </div> </body>
+    </div>
+
+    <footer style="text-align: center; padding: 4rem 0; color: var(--text-dim); font-size: 0.8rem;">
+        &copy; 2024 Yanis Tighouart - Portfolio Professionnel
+    </footer>
+
+</body>
 </html>
