@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Yanis Tighouart</title>
+    <title>Yanis Tighouart - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -18,52 +17,39 @@
         </ul>
     </nav>
 
+    <header class="hero">
+        <span class="tagline">Me contacter</span>
+        <h1>Yanis Tighouart</h1>
+        <h2>Étudiant en Administration Systèmes & Réseaux</h2>
+    </header>
+
     <div class="container">
-        <header style="padding: 3rem 0; text-align: center;">
-            <h1>Me Contacter</h1>
-        </header>
-
-        <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem;">
-            <a href="www.linkedin.com/in/yanis-tighouart-2a8030354" target="_blank" style="color: #0077b5; text-decoration: none; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
-                <i class="fab fa-linkedin fa-2x"></i> <span>LinkedIn</span>
-        </div>
-
-        <section style="max-width: 600px; margin: 0 auto; background: rgba(30, 41, 59, 0.5); padding: 2.5rem; border-radius: 15px; border: 1px solid rgba(59, 130, 246, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+        <section class="contact-section" style="max-width: 700px; margin: 0 auto; padding-bottom: 5rem;">
             <form action="https://formspree.io/f/xnjlgkry" method="POST">
-                
                 <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-dim); font-size: 0.9rem;">Nom complet</label>
-                    <input type="text" name="name" placeholder="Ex: Jean Dupont" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #0f172a; color: white; outline: none;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-dim);">Nom complet</label>
+                    <input type="text" name="name" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(30, 41, 59, 0.5); color: white;">
                 </div>
 
                 <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-dim); font-size: 0.9rem;">Adresse email</label>
-                    <input type="email" name="email" placeholder="nom@entreprise.fr" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #0f172a; color: white; outline: none;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-dim);">Adresse email</label>
+                    <input type="email" name="email" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(30, 41, 59, 0.5); color: white;">
                 </div>
 
                 <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-dim); font-size: 0.9rem;">Objet</label>
-                    <input type="text" name="subject" placeholder="Ex: Offre d'alternance Licence Pro" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #0f172a; color: white; outline: none;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-dim);">Objet</label>
+                    <input type="text" name="subject" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(30, 41, 59, 0.5); color: white;">
                 </div>
 
-                <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-dim); font-size: 0.9rem;">Votre message</label>
-                    <textarea name="message" rows="5" placeholder="Comment puis-je vous aider ?" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #0f172a; color: white; outline: none; resize: vertical;"></textarea>
+                <div style="margin-bottom: 2rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-dim);">Message</label>
+                    <textarea name="message" rows="6" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(30, 41, 59, 0.5); color: white; resize: vertical;"></textarea>
                 </div>
 
-                <input type="text" name="_gotcha" style="display:none">
-
-                <button type="submit" class="btn-main" style="width: 100%; padding: 1rem; cursor: pointer; border: none; font-size: 1rem; font-weight: bold; transition: 0.3s;">
-                    Envoyer le message
-                </button>
+                <button type="submit" class="btn-main" style="width: 100%; cursor: pointer; border: none;">Envoyer le message</button>
             </form>
         </section>
-
     </div>
-
-    <footer style="text-align: center; padding: 4rem 0; color: var(--text-dim); font-size: 0.8rem;">
-        &copy; 2026 Yanis Tighouart - Portfolio Professionnel
-    </footer>
 
 </body>
 </html>
